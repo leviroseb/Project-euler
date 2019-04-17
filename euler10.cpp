@@ -5,15 +5,15 @@ using namespace std;
 //Find the sum of all the primes below two million.
 
 
-double suma_primo(double n)
+double suma_primo(int n)
 {
-    double sum=0;
-    for(double i=2;i<n;i++)
+    int sum=0;
+    for(int i=2;i<n;i++)
     {
         int c=0;
-        for(double j=2;j<i;j++)
+        for(int j=2;j<i;j++)
         {
-            if(fmod(i,j)==0)
+            if(i%j==0)
             {
                 c++;
             }
@@ -31,7 +31,7 @@ double suma_primo(double n)
 
 int main()
 {
-    double n;
+    int n;
     cout<<"numero: ";
     cin>>n;
     cout<<suma_primo(n);
